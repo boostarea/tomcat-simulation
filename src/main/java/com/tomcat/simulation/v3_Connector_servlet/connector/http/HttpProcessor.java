@@ -1,17 +1,16 @@
 package com.tomcat.simulation.v3_Connector_servlet.connector.http;
 
 
-import java.net.Socket;
-import java.io.OutputStream;
-import java.io.IOException;
-import java.util.Locale;
-import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
-
 import com.tomcat.simulation.v3_Connector_servlet.ServletProcessor;
 import com.tomcat.simulation.v3_Connector_servlet.StaticResourceProcessor;
 import org.apache.catalina.util.RequestUtil;
 import org.apache.catalina.util.StringManager;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
 
 /* this class used to be called HttpServer */
 public class HttpProcessor {
@@ -34,7 +33,7 @@ public class HttpProcessor {
    * The string manager for this package.
    */
   protected StringManager sm =
-    StringManager.getManager("com.tomcat.simulation.v3_Connector_servlet.connector.http");
+    StringManager.getManager("config");
 
   public void process(Socket socket) {
     SocketInputStream input = null;
