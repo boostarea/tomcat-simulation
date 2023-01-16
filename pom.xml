@@ -14,18 +14,77 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.0.1</version>
+            <artifactId>javax.servlet</artifactId>
+            <version>2.3.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/lib/servlet.jar</systemPath>
         </dependency>
+
         <!-- https://mvnrepository.com/artifact/tomcat/catalina -->
         <dependency>
             <groupId>tomcat</groupId>
             <artifactId>catalina</artifactId>
             <version>4.0.4</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-beanutils/commons-beanutils -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>1.7.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/commons-digester/commons-digester -->
+        <dependency>
+            <groupId>commons-digester</groupId>
+            <artifactId>commons-digester</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta-regexp</groupId>
+            <artifactId>jakarta-regexp</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-modeler</groupId>
+            <artifactId>commons-modeler</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-daemon</groupId>
+            <artifactId>commons-daemon</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>naming-factory</artifactId>
+            <version>5.0.28</version>
+        </dependency>
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>naming-common</artifactId>
+            <version>5.0.28</version>
+        </dependency>
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>naming-resources</artifactId>
+            <version>5.0.28</version>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/commons-logging/commons-logging -->
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/tomcat/tomcat-util -->
+        <dependency>
+            <groupId>tomcat</groupId>
+            <artifactId>tomcat-util</artifactId>
+            <version>5.5.15</version>
+        </dependency>
+
 
     </dependencies>
 

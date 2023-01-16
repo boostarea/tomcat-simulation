@@ -1,7 +1,7 @@
 package com.tomcat.simulation.v3_Connector_servlet.connector.http;
 
 /**
- * HTTP header enum type.
+ * HTTP header enums type.
  *
  * @author Remy Maucherat
  * @version $Revision: 1.4 $ $Date: 2002/03/18 07:15:40 $

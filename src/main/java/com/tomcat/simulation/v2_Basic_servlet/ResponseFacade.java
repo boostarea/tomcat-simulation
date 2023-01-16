@@ -1,10 +1,10 @@
 package com.tomcat.simulation.v2_Basic_servlet;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.ServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Locale;
-import javax.servlet.ServletResponse;
-import javax.servlet.ServletOutputStream;
 
 public class ResponseFacade implements ServletResponse {
 
@@ -25,11 +25,6 @@ public class ResponseFacade implements ServletResponse {
     return response.getCharacterEncoding();
   }
 
-  @Override
-  public String getContentType() {
-    return null;
-  }
-
   public Locale getLocale() {
     return response.getLocale();
   }
@@ -40,11 +35,6 @@ public class ResponseFacade implements ServletResponse {
 
   public PrintWriter getWriter() throws IOException {
     return response.getWriter();
-  }
-
-  @Override
-  public void setCharacterEncoding(String charset) {
-
   }
 
   public boolean isCommitted() {

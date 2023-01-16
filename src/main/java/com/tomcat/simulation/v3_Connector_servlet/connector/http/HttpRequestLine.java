@@ -3,7 +3,7 @@ package com.tomcat.simulation.v3_Connector_servlet.connector.http;
 
 
 /**
- * HTTP request line enum type.
+ * HTTP request line enums type.
  *
  * @author Remy Maucherat
  * @version $Revision: 1.6 $ $Date: 2002/03/18 07:15:40 $

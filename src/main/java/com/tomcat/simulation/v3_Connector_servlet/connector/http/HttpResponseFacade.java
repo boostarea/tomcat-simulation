@@ -1,12 +1,11 @@
 package com.tomcat.simulation.v3_Connector_servlet.connector.http;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Collection;
-import java.util.Locale;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Locale;
 
 public class HttpResponseFacade implements HttpServletResponse {
   private HttpServletResponse response;
@@ -63,11 +62,6 @@ public class HttpResponseFacade implements HttpServletResponse {
     return response.getCharacterEncoding();
   }
 
-  @Override
-  public String getContentType() {
-    return null;
-  }
-
   public Locale getLocale() {
     return response.getLocale();
   }
@@ -78,11 +72,6 @@ public class HttpResponseFacade implements HttpServletResponse {
 
   public PrintWriter getWriter() throws IOException {
     return response.getWriter();
-  }
-
-  @Override
-  public void setCharacterEncoding(String charset) {
-
   }
 
   public boolean isCommitted() {
@@ -143,25 +132,5 @@ public class HttpResponseFacade implements HttpServletResponse {
 
   public void setStatus(int sc, String message) {
     response.setStatus(sc, message);
-  }
-
-  @Override
-  public int getStatus() {
-    return 0;
-  }
-
-  @Override
-  public String getHeader(String name) {
-    return null;
-  }
-
-  @Override
-  public Collection<String> getHeaders(String name) {
-    return null;
-  }
-
-  @Override
-  public Collection<String> getHeaderNames() {
-    return null;
   }
 }

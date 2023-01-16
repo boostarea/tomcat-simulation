@@ -1,28 +1,16 @@
 package com.tomcat.simulation.v3_Connector_servlet.connector.http;
 
 
-import java.io.OutputStream;
-import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.UnsupportedEncodingException;
-import java.text.SimpleDateFormat;
-import java.util.Collection;
-import java.util.Locale;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
-import javax.servlet.ServletOutputStream;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletResponse;
-
 import com.tomcat.simulation.v3_Connector_servlet.connector.ResponseStream;
 import com.tomcat.simulation.v3_Connector_servlet.connector.ResponseWriter;
 import org.apache.catalina.util.CookieTools;
+
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class HttpResponse implements HttpServletResponse {
 
@@ -477,11 +465,6 @@ public class HttpResponse implements HttpServletResponse {
     return writer;
   }
 
-  @Override
-  public void setCharacterEncoding(String charset) {
-
-  }
-
   /**
    * Has the output of this response already been committed?
    */
@@ -584,25 +567,5 @@ public class HttpResponse implements HttpServletResponse {
   }
 
   public void setStatus(int sc, String message) {
-  }
-
-  @Override
-  public int getStatus() {
-    return 0;
-  }
-
-  @Override
-  public String getHeader(String name) {
-    return null;
-  }
-
-  @Override
-  public Collection<String> getHeaders(String name) {
-    return null;
-  }
-
-  @Override
-  public Collection<String> getHeaderNames() {
-    return null;
   }
 }

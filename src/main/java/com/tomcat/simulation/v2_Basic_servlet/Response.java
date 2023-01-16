@@ -1,14 +1,9 @@
 package com.tomcat.simulation.v2_Basic_servlet;
 
-import java.io.OutputStream;
-import java.io.IOException;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.File;
-import java.io.PrintWriter;
-import java.util.Locale;
-import javax.servlet.ServletResponse;
 import javax.servlet.ServletOutputStream;
+import javax.servlet.ServletResponse;
+import java.io.*;
+import java.util.Locale;
 
 public class Response implements ServletResponse {
 
@@ -77,11 +72,6 @@ public class Response implements ServletResponse {
     return null;
   }
 
-  @Override
-  public String getContentType() {
-    return null;
-  }
-
   public Locale getLocale() {
     return null;
   }
@@ -95,11 +85,6 @@ public class Response implements ServletResponse {
     // but print() will not.
     writer = new PrintWriter(output, true);
     return writer;
-  }
-
-  @Override
-  public void setCharacterEncoding(String charset) {
-
   }
 
   public boolean isCommitted() {

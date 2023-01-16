@@ -5,41 +5,24 @@ package com.tomcat.simulation.v3_Connector_servlet.connector.http;
  *  The HttpRequestImpl class employs a pool of HttpHeader objects for performance
  *  These two classes will be explained in Chapter 4.
  */
-import javax.servlet.AsyncContext;
-import javax.servlet.DispatcherType;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.Cookie;
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletInputStream;
-import javax.servlet.http.Part;
-import java.security.Principal;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.UnsupportedEncodingException;
-import java.net.InetAddress;
-import java.net.Socket;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Date;
-import java.util.Enumeration;
-import java.util.HashMap;
-import java.util.Locale;
-import java.util.Map;
 
 import com.tomcat.simulation.v3_Connector_servlet.connector.RequestStream;
 import org.apache.catalina.util.Enumerator;
 import org.apache.catalina.util.ParameterMap;
 import org.apache.catalina.util.RequestUtil;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import java.io.*;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.security.Principal;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class HttpRequest implements HttpServletRequest {
 
@@ -492,61 +475,6 @@ public class HttpRequest implements HttpServletRequest {
     return null;
   }
 
-  @Override
-  public int getRemotePort() {
-    return 0;
-  }
-
-  @Override
-  public String getLocalName() {
-    return null;
-  }
-
-  @Override
-  public String getLocalAddr() {
-    return null;
-  }
-
-  @Override
-  public int getLocalPort() {
-    return 0;
-  }
-
-  @Override
-  public ServletContext getServletContext() {
-    return null;
-  }
-
-  @Override
-  public AsyncContext startAsync() throws IllegalStateException {
-    return null;
-  }
-
-  @Override
-  public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) throws IllegalStateException {
-    return null;
-  }
-
-  @Override
-  public boolean isAsyncStarted() {
-    return false;
-  }
-
-  @Override
-  public boolean isAsyncSupported() {
-    return false;
-  }
-
-  @Override
-  public AsyncContext getAsyncContext() {
-    return null;
-  }
-
-  @Override
-  public DispatcherType getDispatcherType() {
-    return null;
-  }
-
   public String getRemoteAddr() {
     return null;
   }
@@ -609,31 +537,6 @@ public class HttpRequest implements HttpServletRequest {
 
   public boolean isRequestedSessionIdFromUrl() {
     return isRequestedSessionIdFromURL();
-  }
-
-  @Override
-  public boolean authenticate(HttpServletResponse response) throws IOException, ServletException {
-    return false;
-  }
-
-  @Override
-  public void login(String username, String password) throws ServletException {
-
-  }
-
-  @Override
-  public void logout() throws ServletException {
-
-  }
-
-  @Override
-  public Collection<Part> getParts() throws IOException, ServletException {
-    return null;
-  }
-
-  @Override
-  public Part getPart(String name) throws IOException, ServletException {
-    return null;
   }
 
   public boolean isRequestedSessionIdFromURL() {
